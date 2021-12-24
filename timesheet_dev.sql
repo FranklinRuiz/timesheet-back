@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 21/12/2021 23:32:29
+ Date: 23/12/2021 23:42:00
 */
 
 SET NAMES utf8mb4;
@@ -63,6 +63,18 @@ CREATE TABLE `cargos`  (
 -- ----------------------------
 -- Records of cargos
 -- ----------------------------
+INSERT INTO `cargos` VALUES (1, 'programador 2', '001', 1, 'admin', '2021-12-23 22:24:00', 'admin', '2021-12-23 22:38:50');
+INSERT INTO `cargos` VALUES (2, 'Diseñador', '002', 1, 'admin', '2021-12-23 22:39:18', 'admin', '2021-12-23 23:40:39');
+INSERT INTO `cargos` VALUES (3, 'Repartidor1', '002', 0, 'admin', '2021-12-23 23:23:04', 'admin', '2021-12-23 23:35:32');
+INSERT INTO `cargos` VALUES (4, 'sdfsfsfs', '003', 1, 'admin', '2021-12-23 23:39:38', 'admin', '2021-12-23 23:39:38');
+INSERT INTO `cargos` VALUES (5, 'asdfsdfgsdg', '004', 1, 'admin', '2021-12-23 23:39:43', 'admin', '2021-12-23 23:39:43');
+INSERT INTO `cargos` VALUES (6, 'assdfsdf', '005', 1, 'admin', '2021-12-23 23:39:49', 'admin', '2021-12-23 23:39:49');
+INSERT INTO `cargos` VALUES (7, 'asdadasd', '006', 1, 'admin', '2021-12-23 23:39:55', 'admin', '2021-12-23 23:39:55');
+INSERT INTO `cargos` VALUES (8, 'asdafdasf', '007', 1, 'admin', '2021-12-23 23:40:01', 'admin', '2021-12-23 23:40:01');
+INSERT INTO `cargos` VALUES (9, 'sdafsfsf', '008', 1, 'admin', '2021-12-23 23:40:10', 'admin', '2021-12-23 23:40:45');
+INSERT INTO `cargos` VALUES (10, 'asdsadasfd', '009', 1, 'admin', '2021-12-23 23:40:16', 'admin', '2021-12-23 23:40:16');
+INSERT INTO `cargos` VALUES (11, 'asfadsfsdf', '010', 1, 'admin', '2021-12-23 23:40:22', 'admin', '2021-12-23 23:40:22');
+INSERT INTO `cargos` VALUES (12, 'asfsdfsdf', '011', 1, 'admin', '2021-12-23 23:40:28', 'admin', '2021-12-23 23:40:28');
 
 -- ----------------------------
 -- Table structure for dias_festivos
@@ -109,10 +121,10 @@ CREATE TABLE `dispositivos`  (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for empleado
+-- Table structure for empleados
 -- ----------------------------
-DROP TABLE IF EXISTS `empleado`;
-CREATE TABLE `empleado`  (
+DROP TABLE IF EXISTS `empleados`;
+CREATE TABLE `empleados`  (
   `id_empleado` int(11) NOT NULL AUTO_INCREMENT,
   `id_persona` int(11) NOT NULL,
   `id_cargo` int(11) NOT NULL,
@@ -128,10 +140,10 @@ CREATE TABLE `empleado`  (
   `modificado_por` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `modificado_fec` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id_empleado`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of empleado
+-- Records of empleados
 -- ----------------------------
 
 -- ----------------------------
@@ -160,6 +172,7 @@ CREATE TABLE `horarios`  (
 DROP TABLE IF EXISTS `personas`;
 CREATE TABLE `personas`  (
   `id_persona` int(11) NOT NULL AUTO_INCREMENT,
+  `tipo_documento` int(11) NULL DEFAULT NULL,
   `numero_documento` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `nombres` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `apellido_paterno` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -268,9 +281,9 @@ CREATE TABLE `usuarios`  (
   `correo` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `estado` tinyint(1) NOT NULL,
   `creado_por` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `fec_creacion` datetime(0) NOT NULL,
+  `creado_fec` datetime(0) NOT NULL,
   `modificado_por` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `fec_modificacion` datetime(0) NULL DEFAULT NULL,
+  `modificado_fec` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id_usuario`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = DYNAMIC;
 
