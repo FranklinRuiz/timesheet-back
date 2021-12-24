@@ -26,7 +26,7 @@ public class Auditoria<U> {
     @CreatedDate
     @JsonIgnore
     @Column(updatable = false)
-    private LocalDateTime fecCreacion;
+    private LocalDateTime creadoFec;
 
 
     @LastModifiedBy
@@ -35,6 +35,6 @@ public class Auditoria<U> {
 
     @LastModifiedDate
     @JsonIgnore
-    private LocalDateTime fecModificacion;
+    private LocalDateTime modificadoFec;
 
 }
