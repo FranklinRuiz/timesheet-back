@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 23/12/2021 23:42:00
+ Date: 26/12/2021 23:12:24
 */
 
 SET NAMES utf8mb4;
@@ -58,7 +58,7 @@ CREATE TABLE `cargos`  (
   `modificado_por` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `modificado_fec` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id_cargo`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of cargos
@@ -75,6 +75,8 @@ INSERT INTO `cargos` VALUES (9, 'sdafsfsf', '008', 1, 'admin', '2021-12-23 23:40
 INSERT INTO `cargos` VALUES (10, 'asdsadasfd', '009', 1, 'admin', '2021-12-23 23:40:16', 'admin', '2021-12-23 23:40:16');
 INSERT INTO `cargos` VALUES (11, 'asfadsfsdf', '010', 1, 'admin', '2021-12-23 23:40:22', 'admin', '2021-12-23 23:40:22');
 INSERT INTO `cargos` VALUES (12, 'asfsdfsdf', '011', 1, 'admin', '2021-12-23 23:40:28', 'admin', '2021-12-23 23:40:28');
+INSERT INTO `cargos` VALUES (13, 'Secretaria', '002', 1, 'admin', '2021-12-26 22:33:41', 'admin', '2021-12-26 22:33:41');
+INSERT INTO `cargos` VALUES (14, 'Gerente', '003', 1, 'admin', '2021-12-26 22:34:28', 'admin', '2021-12-26 22:34:28');
 
 -- ----------------------------
 -- Table structure for dias_festivos
@@ -140,7 +142,7 @@ CREATE TABLE `empleados`  (
   `modificado_por` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `modificado_fec` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id_empleado`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of empleados
@@ -220,13 +222,15 @@ CREATE TABLE `tipo_trabajo`  (
   `creado_por` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `creado_fec` datetime(0) NOT NULL,
   `modificado_por` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
-  `modificado_fech` datetime(0) NULL DEFAULT NULL,
+  `modificado_fec` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id_tipo_trabajo`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tipo_trabajo
 -- ----------------------------
+INSERT INTO `tipo_trabajo` VALUES (1, 'Remoto', 'RM', 1, 'admin', '2021-12-26 23:10:36', 'admin', '2021-12-26 23:10:36');
+INSERT INTO `tipo_trabajo` VALUES (2, 'Presencial', 'PR', 1, 'admin', '2021-12-26 23:11:52', 'admin', '2021-12-26 23:11:52');
 
 -- ----------------------------
 -- Table structure for ubicacion

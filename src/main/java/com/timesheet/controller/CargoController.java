@@ -16,6 +16,7 @@ import javax.validation.Valid;
 @RequestMapping("/api/cargo")
 @RequiredArgsConstructor
 public class CargoController {
+
     private final CargoService cargoService;
 
     @PostMapping("/save")

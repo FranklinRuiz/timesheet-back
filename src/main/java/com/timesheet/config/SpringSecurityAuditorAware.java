@@ -17,5 +17,4 @@ public class SpringSecurityAuditorAware {
         return ()->Optional.ofNullable(SecurityUtil.getCurrentUsername().get()).filter(s -> !s.isEmpty());
     }
 
-
 }
