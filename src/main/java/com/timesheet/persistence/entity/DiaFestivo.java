@@ -6,6 +6,8 @@ import io.swagger.annotations.ApiParam;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -16,7 +18,7 @@ public class DiaFestivo extends Auditoria<String> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idDiaFestivo;
     private String nombreDiaFestivo;
-    private Date fecha;
+    private LocalDate fecha;
     @JsonIgnore
     private boolean flgActivo;
 }
