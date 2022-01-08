@@ -27,7 +27,7 @@ public class DiaFestivoServiceImpl implements DiaFestivoService {
     @Override
     public DiaFestivo update(DiaFestivo diaFestivo) {
         diaFestivo.setFlgActivo(true);
-        
+
         return diaFestivoRepository.save(diaFestivo);
     }
 

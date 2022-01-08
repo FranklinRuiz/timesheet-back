@@ -18,7 +18,6 @@ public class DiaFestivo extends Auditoria<String> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idDiaFestivo;
     private String nombreDiaFestivo;
-    private LocalDate fecha;
-    @JsonIgnore
+    private LocalDate fechaDiaFestivo;
     private boolean flgActivo;
 }
