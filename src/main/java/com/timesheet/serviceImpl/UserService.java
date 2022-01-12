@@ -1,7 +1,6 @@
 package com.timesheet.serviceImpl;
 
 import com.timesheet.dto.UserDto;
-import com.timesheet.exception.DuplicateMemberException;
 
 import com.timesheet.persistence.entity.Authority;
 import com.timesheet.persistence.entity.Usuario;
@@ -25,9 +24,9 @@ public class UserService {
 
     @Transactional
     public Usuario signup(UserDto userDto) {
-        if (userRepository.findOneWithAuthoritiesByUsuario(userDto.getUsuario()).orElse(null) != null) {
-            throw new DuplicateMemberException("Ya eres un usuario registrado.");
-        }
+//        if (userRepository.findOneWithAuthoritiesByUsuario(userDto.getUsuario()).orElse(null) != null) {
+//            throw new DuplicateMemberException("Ya eres un usuario registrado.");
+//        }
 
         //Ventajas del patrón constructor
         Authority authority = Authority.builder()
