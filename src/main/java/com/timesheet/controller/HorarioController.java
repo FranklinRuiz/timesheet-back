@@ -1,8 +1,8 @@
 package com.timesheet.controller;
 
 import com.timesheet.handler.ResponseHandler;
-import com.timesheet.persistence.entity.Cargo;
-import com.timesheet.service.CargoService;
+import com.timesheet.persistence.entity.Horario;
+import com.timesheet.service.HorarioService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import lombok.RequiredArgsConstructor;
@@ -14,54 +14,54 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/cargo")
+@RequestMapping("/api/horario")
 @RequiredArgsConstructor
-public class CargoController {
-    private final CargoService cargoService;
+public class HorarioController {
+    private final HorarioService horarioService;
 
     @PostMapping("/save")
-    @ApiOperation("Post save - guarda datos de nuevo cargo")
+    @ApiOperation("Post save - Guarda un objeto tipo Horario")
     @ApiResponse(code = 200, message = "OK")
-    public ResponseEntity<Object> save(@Valid @RequestBody Cargo cargo) {
+    public ResponseEntity<Object> save(@Valid @RequestBody Horario horario) {
         try {
-            Cargo result = cargoService.saveCargo(cargo);
-            return ResponseHandler.generateResponse("Datos registrados con exito!", HttpStatus.OK, result);
+            Horario result = horarioService.saveHorario(horario);
+            return ResponseHandler.generateResponse("Horario registrado con éxito!", HttpStatus.OK, result);
         } catch (Exception e) {
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, null);
         }
     }
 
     @GetMapping("/list")
-    @ApiOperation("Get list - lista todos los cargos registrados")
+    @ApiOperation("Get list - Retorna todos los horarios registrados")
     @ApiResponse(code = 200, message = "OK")
     public ResponseEntity<Object> get(Pageable pageable) {
         try {
-            Page<Cargo> c = cargoService.listAllByPage(pageable);
-            return ResponseHandler.generateResponse("Datos listados con exito!", HttpStatus.OK, c);
+            Page<Horario> c = horarioService.listAllByPage(pageable);
+            return ResponseHandler.generateResponse("Horarios listados con éxito!", HttpStatus.OK, c);
         } catch (Exception e) {
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, null);
         }
     }
 
     @PutMapping("/update")
-    @ApiOperation("Put update - actualiza datos de cargo")
+    @ApiOperation("Put update - actualiza un objeto tipo horario")
     @ApiResponse(code = 200, message = "OK")
-    public ResponseEntity<Object> update(@Valid @RequestBody Cargo cargo) {
+    public ResponseEntity<Object> update(@Valid @RequestBody Horario horario) {
         try {
-            Cargo result = cargoService.updateCargo(cargo);
-            return ResponseHandler.generateResponse("Datos actualizados con exito!", HttpStatus.OK, result);
+            Horario result = horarioService.updateHorario(horario);
+            return ResponseHandler.generateResponse("Horario actializado con éxito!", HttpStatus.OK, result);
         } catch (Exception e) {
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, null);
         }
     }
 
-    @DeleteMapping("/delete/{idCargo}")
-    @ApiOperation("Delete - elimina cargo registrado")
+    @DeleteMapping("/delete/{idHorario}")
+    @ApiOperation("Delete - Elimina un objeto tipo horario")
     @ApiResponse(code = 200, message = "OK")
-    public ResponseEntity<Object> delete(@PathVariable Long idCargo) {
+    public ResponseEntity<Object> delete(@PathVariable Long idHorario) {
         try {
-            Long result = cargoService.deleteCargo(idCargo);
-            return ResponseHandler.generateResponse("Dato eliminado con exito!", HttpStatus.OK, result);
+            Long result = horarioService.deleteHorario(idHorario);
+            return ResponseHandler.generateResponse("Horario eliminado con éxito!", HttpStatus.OK, result);
         } catch (Exception e) {
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, null);
         }

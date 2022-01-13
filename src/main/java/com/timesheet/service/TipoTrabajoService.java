@@ -5,8 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface TipoTrabajoService {
-    TipoTrabajo save(TipoTrabajo tipoTrabajo);
-    TipoTrabajo update(TipoTrabajo tipoTrabajo);
-    Page<TipoTrabajo> list(Pageable pageable);
-    Long delete(Long idTipoTrabajo);
+    TipoTrabajo saveTipoTrabajo(TipoTrabajo tipoTrabajo);
+    TipoTrabajo updateTipoTrabajo(TipoTrabajo tipoTrabajo);
+    Page<TipoTrabajo> listAllByPage(Pageable pageable);
+    Long deleteTipoTrabajo(Long idTipoTrabajo);
 }

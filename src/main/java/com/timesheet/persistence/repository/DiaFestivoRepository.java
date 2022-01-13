@@ -1,6 +1,5 @@
 package com.timesheet.persistence.repository;
 
-import com.timesheet.persistence.entity.Cargo;
 import com.timesheet.persistence.entity.DiaFestivo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
