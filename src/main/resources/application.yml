@@ -1,8 +1,13 @@
+server:
+  port: 8080
+
 spring:
+  application:
+    name: backend-sgsi
   datasource:
     url: jdbc:mysql://localhost:3306/timesheet_dev?serverTimezone=America/Lima&allowPublicKeyRetrieval=true&useSSL=false
     username: root
-    password:
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       connection-test-query: SELECT 1
@@ -21,7 +26,12 @@ spring:
       hibernate:
         format_sql: true
 
-jwt:
-  header: Authorization
-  secret: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
-  token-validity-in-seconds: 86400
+keycloak:
+  realm: afus
+  auth-server-url: ${KEYCLOACK_SERVER:http://147.182.215.248:8091/auth}
+  ssl-required: NONE
+  resource: front-afus
+  credentials:
+    secret: 24YNGpou7pdmusuVehOmq4H3BlGgxdyV
+  use-resource-role-mappings: true
+  bearer-only: true
