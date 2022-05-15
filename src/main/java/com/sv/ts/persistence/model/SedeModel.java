@@ -15,6 +15,7 @@ public class SedeModel extends Audit<String> {
     private String nombreSede;
     private String descripcion;
     private String direccion;
+    private String beacon;
     private String coordLong;
     private String coordLat;
     private boolean flgActivo;
