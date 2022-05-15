@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 11/05/2022 00:13:33
+ Date: 14/05/2022 23:07:03
 */
 
 SET NAMES utf8mb4;
@@ -58,28 +58,29 @@ CREATE TABLE `cargos`  (
   `user_upd` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `date_upd` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id_cargo`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of cargos
 -- ----------------------------
-INSERT INTO `cargos` VALUES (1, 'programador 2', '001', 0, 'admin', '2021-12-23 22:24:00', 'admin', '2022-01-11 21:55:43');
-INSERT INTO `cargos` VALUES (2, 'Diseñador', '002', 1, 'admin', '2021-12-23 22:39:18', 'admin', '2021-12-23 23:40:39');
-INSERT INTO `cargos` VALUES (3, 'Repartidor1', '002', 0, 'admin', '2021-12-23 23:23:04', 'admin', '2021-12-23 23:35:32');
-INSERT INTO `cargos` VALUES (4, 'sdfsfsfs', '003', 1, 'admin', '2021-12-23 23:39:38', 'admin', '2021-12-23 23:39:38');
-INSERT INTO `cargos` VALUES (5, 'asdfsdfgsdg', '004', 1, 'admin', '2021-12-23 23:39:43', 'admin', '2021-12-23 23:39:43');
-INSERT INTO `cargos` VALUES (6, 'assdfsdf', '005', 1, 'admin', '2021-12-23 23:39:49', 'admin', '2021-12-23 23:39:49');
-INSERT INTO `cargos` VALUES (7, 'asdadasd', '006', 1, 'admin', '2021-12-23 23:39:55', 'admin', '2021-12-23 23:39:55');
-INSERT INTO `cargos` VALUES (8, 'asdafdasf', '007', 1, 'admin', '2021-12-23 23:40:01', 'admin', '2021-12-23 23:40:01');
-INSERT INTO `cargos` VALUES (9, 'sdafsfsf', '008', 1, 'admin', '2021-12-23 23:40:10', 'admin', '2021-12-23 23:40:45');
-INSERT INTO `cargos` VALUES (10, 'asdsadasfd', '009', 1, 'admin', '2021-12-23 23:40:16', 'admin', '2021-12-23 23:40:16');
-INSERT INTO `cargos` VALUES (11, 'asfadsfsdf', '010', 1, 'admin', '2021-12-23 23:40:22', 'admin', '2021-12-23 23:40:22');
-INSERT INTO `cargos` VALUES (12, 'asfsdfsdf', '011', 1, 'admin', '2021-12-23 23:40:28', 'admin', '2021-12-23 23:40:28');
-INSERT INTO `cargos` VALUES (13, 'Secretaria', '002', 1, 'admin', '2021-12-26 22:33:41', 'admin', '2021-12-26 22:33:41');
-INSERT INTO `cargos` VALUES (14, 'Gerente', '003', 1, 'admin', '2021-12-26 22:34:28', 'admin', '2021-12-26 22:34:28');
+INSERT INTO `cargos` VALUES (1, 'programador 2', '001', 1, 'admin', '2021-12-23 22:24:00', 'fasto', '2022-05-11 01:24:34');
+INSERT INTO `cargos` VALUES (2, 'Diseñador', '002', 1, 'admin', '2021-12-23 22:39:18', 'fasto', '2022-05-11 01:24:37');
+INSERT INTO `cargos` VALUES (3, 'Repartidor1', '002', 1, 'admin', '2021-12-23 23:23:04', 'fasto', '2022-05-11 01:24:32');
+INSERT INTO `cargos` VALUES (4, 'sdfsfsfs', '003', 1, 'admin', '2021-12-23 23:39:38', 'fasto', '2022-05-11 01:24:29');
+INSERT INTO `cargos` VALUES (5, 'asdfsdfgsdg', '004', 1, 'admin', '2021-12-23 23:39:43', 'fasto', '2022-05-11 01:24:27');
+INSERT INTO `cargos` VALUES (6, 'assdfsdf', '005', 1, 'admin', '2021-12-23 23:39:49', 'fasto', '2022-05-11 01:24:20');
+INSERT INTO `cargos` VALUES (7, 'asdadasd', '006', 1, 'admin', '2021-12-23 23:39:55', 'fasto', '2022-05-11 01:24:13');
+INSERT INTO `cargos` VALUES (8, 'asdafdasf', '007', 1, 'admin', '2021-12-23 23:40:01', 'fasto', '2022-05-11 01:24:11');
+INSERT INTO `cargos` VALUES (9, 'sdafsfsf', '008', 1, 'admin', '2021-12-23 23:40:10', 'fasto', '2022-05-11 01:24:09');
+INSERT INTO `cargos` VALUES (10, 'asdsadasfd', '009', 1, 'admin', '2021-12-23 23:40:16', 'fasto', '2022-05-11 01:24:17');
+INSERT INTO `cargos` VALUES (11, 'asfadsfsdf', '010', 1, 'admin', '2021-12-23 23:40:22', 'fasto', '2022-05-11 01:24:15');
+INSERT INTO `cargos` VALUES (12, 'asfsdfsdf', '011', 1, 'admin', '2021-12-23 23:40:28', 'fasto', '2022-05-11 01:24:24');
+INSERT INTO `cargos` VALUES (13, 'Secretaria', '002', 1, 'admin', '2021-12-26 22:33:41', 'fasto', '2022-05-11 01:24:22');
+INSERT INTO `cargos` VALUES (14, 'Gerente', '003', 1, 'admin', '2021-12-26 22:34:28', 'fasto', '2022-05-11 01:24:39');
 INSERT INTO `cargos` VALUES (15, 'Diseñadora', '003', 1, 'admin', '2022-01-11 21:55:14', 'admin', '2022-01-11 21:55:14');
-INSERT INTO `cargos` VALUES (16, 'sfasfafsdfsdf', '0011', 1, 'admin', '2022-01-11 22:02:17', 'admin', '2022-01-11 22:02:17');
-INSERT INTO `cargos` VALUES (17, 'sdfsfsf', '05544', 1, 'admin', '2022-02-05 22:44:28', 'admin', '2022-02-05 22:44:28');
+INSERT INTO `cargos` VALUES (16, 'sfasfafsdfsdf', '0011', 1, 'admin', '2022-01-11 22:02:17', 'fasto', '2022-05-11 01:24:41');
+INSERT INTO `cargos` VALUES (17, 'sdfsfsf', '05544', 1, 'admin', '2022-02-05 22:44:28', 'fasto', '2022-05-11 01:24:44');
+INSERT INTO `cargos` VALUES (18, 'Prueba nuevo1', 'C-005', 1, 'fasto', '2022-05-11 01:00:55', 'fasto', '2022-05-11 01:01:03');
 
 -- ----------------------------
 -- Table structure for dias_festivos
@@ -136,7 +137,7 @@ CREATE TABLE `empleados`  (
   `id_persona` int(11) NOT NULL,
   `id_cargo` int(11) NOT NULL,
   `id_horario` int(11) NOT NULL,
-  `codigo_empleado` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `codigo_empleado` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `telefono` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `correo` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `direccion` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
@@ -147,11 +148,12 @@ CREATE TABLE `empleados`  (
   `user_upd` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `date_upd` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id_empleado`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of empleados
 -- ----------------------------
+INSERT INTO `empleados` VALUES (1, 2, 1, 1, NULL, '931687890', 'franklin.asto.leon@gmail.com', 'dirección prueba', NULL, 1, 'fasto', '2022-05-14 17:11:33', 'fasto', '2022-05-14 17:11:33');
 
 -- ----------------------------
 -- Table structure for horarios
@@ -159,6 +161,7 @@ CREATE TABLE `empleados`  (
 DROP TABLE IF EXISTS `horarios`;
 CREATE TABLE `horarios`  (
   `id_horario` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `hora_inicio` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `hora_fin` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `flg_activo` tinyint(1) NULL DEFAULT 1,
@@ -167,11 +170,13 @@ CREATE TABLE `horarios`  (
   `user_upd` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `date_upd` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id_horario`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of horarios
 -- ----------------------------
+INSERT INTO `horarios` VALUES (1, 'Operador', '08:00', '18:00', 1, 'fasto', '2022-05-12 22:09:27', 'fasto', '2022-05-12 22:34:33');
+INSERT INTO `horarios` VALUES (2, 'Personal administrativo', '08:00', '18:00', 1, 'fasto', '2022-05-12 22:10:58', 'fasto', '2022-05-12 22:34:12');
 
 -- ----------------------------
 -- Table structure for personas
@@ -193,11 +198,12 @@ CREATE TABLE `personas`  (
   `user_upd` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `date_upd` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id_persona`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of personas
 -- ----------------------------
+INSERT INTO `personas` VALUES (2, 1, '72669187', 'Franklin Ruiz', 'Asto', 'Leon', '1994-07-13', '1', 'Franklin Ruiz Asto Leon', 1, 'fasto', '2022-05-14 17:11:33', 'fasto', '2022-05-14 17:11:33');
 
 -- ----------------------------
 -- Table structure for sedes
@@ -208,6 +214,7 @@ CREATE TABLE `sedes`  (
   `nombre_sede` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `descripcion` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `direccion` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `beacon` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `coord_long` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `coord_lat` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `flg_activo` tinyint(1) NULL DEFAULT 1,
@@ -216,7 +223,7 @@ CREATE TABLE `sedes`  (
   `user_upd` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `date_upd` datetime(0) NULL DEFAULT NULL,
   PRIMARY KEY (`id_sede`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sedes
