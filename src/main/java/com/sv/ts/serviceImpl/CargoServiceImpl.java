@@ -11,7 +11,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -66,5 +68,12 @@ public class CargoServiceImpl implements CargoService {
             rpta = cargoRepository.save(t.get()) != null ? true : false;
         }
         return rpta;
+    }
+
+    @Override
+    public List<CargoDto> listCargo() {
+        List<CargoModel> entities = cargoRepository.findByFlgActivo(Status.ACTIVE.isValue());
+        List<CargoDto> dtoPage = entities.stream().map(this::convertToCargoDto).collect(Collectors.toList());
+        return dtoPage;
     }
 }

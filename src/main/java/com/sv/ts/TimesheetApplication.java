@@ -21,7 +21,7 @@ public class TimesheetApplication {
 
     @Bean(name = "messageSource")
     public MessageSource messageSource() {
-        SvMessageSource messageSource = new SvMessageSource("default", 60, "classpath:i18n/messages");
+        SvMessageSource messageSource = new SvMessageSource("default", 60, "classpath:i18n/messages","classpath:i18n/messages-legacy");
         return messageSource;
     }
 

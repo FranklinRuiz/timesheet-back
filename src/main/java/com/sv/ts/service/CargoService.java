@@ -5,6 +5,8 @@ import com.sv.ts.persistence.model.CargoModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 public interface CargoService {
     CargoModel saveCargo(CargoModel cargo);
 
@@ -13,4 +15,6 @@ public interface CargoService {
     Page<CargoDto> listAllByPage(Pageable pageable, String nombre);
 
     boolean deleteCargo(Long idCargo) throws Exception;
+
+    List<CargoDto> listCargo();
 }

@@ -5,6 +5,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface CargoRepository extends JpaRepository<CargoModel, Long> {
     Page<CargoModel> findByFlgActivoAndNombreCargoContaining(Pageable pageable, boolean flgActivo, String nombre);
+
+    List<CargoModel> findByFlgActivo(boolean flgActivo);
 }

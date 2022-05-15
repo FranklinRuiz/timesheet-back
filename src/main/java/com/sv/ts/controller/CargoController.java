@@ -11,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/cargo")
@@ -44,4 +45,9 @@ public class CargoController {
         return cargoService.deleteCargo(idCargo);
     }
 
+    @GetMapping(value = "/list-all", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiOperation("Get list - Lista todos los cargos")
+    public List<CargoDto> getAll() {
+        return cargoService.listCargo();
+    }
 }
