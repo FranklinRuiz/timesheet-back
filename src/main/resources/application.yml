@@ -1,13 +1,13 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
     name: backend-sgsi
   datasource:
-    url: jdbc:mysql://localhost:3306/timesheet_dev?serverTimezone=America/Lima&allowPublicKeyRetrieval=true&useSSL=false
-    username: root
-    password: 123456
+    url: jdbc:mysql://147.182.215.248:3306/timesheet_dev?serverTimezone=America/Lima&allowPublicKeyRetrieval=true&useSSL=false
+    username: remoto
+    password: 1Franklin
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       connection-test-query: SELECT 1
