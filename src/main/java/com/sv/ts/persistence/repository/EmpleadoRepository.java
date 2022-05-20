@@ -11,7 +11,7 @@ public interface EmpleadoRepository extends JpaRepository<EmpleadoModel, Long> {
     @Query("select e,p.tipoDocumento,p.numeroDocumento,p.nombres,p.apellidoPaterno,p.apellidoMaterno,p.fechaNacimiento,p.sexo,p.nombreCompleto,c.nombreCargo,concat(o.nombre,' | ',o.horaInicio,' - ',o.horaFin) as horario from EmpleadoModel e " +
             "inner join PersonaModel p on e.idPersona = p.idPersona " +
             "inner join CargoModel c on e.idCargo = c.idCargo " +
-            "inner join HorarioModel o on e.idCargo = o.idHorario " +
+            "inner join HorarioModel o on e.idHorario = o.idHorario " +
             "where p.nombreCompleto like %:nombre% and e.flgActivo = :activo ")
     Page<Object[]> findAllByPage(@Param("nombre") String nombre, @Param("activo") Boolean activo, Pageable page);
 }

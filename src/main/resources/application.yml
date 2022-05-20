@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: backend-sgsi
+    name: backend-timesheet
   datasource:
     url: jdbc:mysql://147.182.215.248:3306/timesheet_dev?serverTimezone=America/Lima&allowPublicKeyRetrieval=true&useSSL=false
     username: remoto
