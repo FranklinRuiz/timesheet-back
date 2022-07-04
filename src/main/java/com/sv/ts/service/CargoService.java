@@ -1,6 +1,6 @@
 package com.sv.ts.service;
 
-import com.sv.ts.dto.CargoDto;
+import com.sv.ts.persistence.dto.CargoDto;
 import com.sv.ts.persistence.model.CargoModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

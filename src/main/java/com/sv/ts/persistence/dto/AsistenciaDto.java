@@ -1,16 +1,11 @@
-package com.sv.ts.persistence.model;
+package com.sv.ts.persistence.dto;
 
-import com.sv.ts.utils.Audit;
+import lombok.Builder;
 import lombok.Data;
 
-import javax.persistence.*;
-
 @Data
-@Entity
-@Table(name = "asistencia")
-public class AsistenciaModel extends Audit<String> {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Builder
+public class AsistenciaDto {
     private Long idAsistencia;
     private Long idEmpleado;
     private Long idTipoTrabajo;
@@ -21,5 +16,8 @@ public class AsistenciaModel extends Audit<String> {
     private String coordLong;
     private String coordLat;
     private boolean flgDiaFestivo;
-    private boolean flgActivo;
 }
+
+
+
+

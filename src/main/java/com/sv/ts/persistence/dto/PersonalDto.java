@@ -1,4 +1,4 @@
-package com.sv.ts.dto;
+package com.sv.ts.persistence.dto;
 
 import lombok.Builder;
 import lombok.Data;
@@ -26,4 +26,5 @@ public class PersonalDto {
     private String correo;
     private String direccion;
     private String foto;
+    private Long idArea;
 }

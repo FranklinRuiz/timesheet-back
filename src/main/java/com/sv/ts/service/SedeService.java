@@ -1,6 +1,6 @@
 package com.sv.ts.service;
 
-import com.sv.ts.dto.SedeDto;
+import com.sv.ts.persistence.dto.SedeDto;
 import com.sv.ts.persistence.model.SedeModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

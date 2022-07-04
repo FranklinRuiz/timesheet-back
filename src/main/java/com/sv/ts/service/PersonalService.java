@@ -1,7 +1,7 @@
 package com.sv.ts.service;
 
-import com.sv.ts.dto.PersonalDto;
-import com.sv.ts.dto.TempDto;
+import com.sv.ts.persistence.dto.PersonalDto;
+import com.sv.ts.persistence.dto.TempDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

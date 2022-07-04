@@ -1,7 +1,7 @@
 package com.sv.ts.controller;
 
-import com.sv.ts.dto.PersonalDto;
-import com.sv.ts.dto.TempDto;
+import com.sv.ts.persistence.dto.PersonalDto;
+import com.sv.ts.persistence.dto.TempDto;
 import com.sv.ts.service.PersonalService;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;

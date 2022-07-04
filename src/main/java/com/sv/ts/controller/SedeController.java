@@ -1,8 +1,6 @@
 package com.sv.ts.controller;
 
-import com.sv.ts.dto.HorarioDto;
-import com.sv.ts.dto.SedeDto;
-import com.sv.ts.persistence.model.HorarioModel;
+import com.sv.ts.persistence.dto.SedeDto;
 import com.sv.ts.persistence.model.SedeModel;
 import com.sv.ts.service.SedeService;
 import io.swagger.annotations.ApiOperation;

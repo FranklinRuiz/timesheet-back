@@ -1,8 +1,8 @@
 package com.sv.ts.serviceImpl;
 
 import com.sv.ts.config.advice.BusinessException;
-import com.sv.ts.dto.PersonalDto;
-import com.sv.ts.dto.TempDto;
+import com.sv.ts.persistence.dto.PersonalDto;
+import com.sv.ts.persistence.dto.TempDto;
 import com.sv.ts.enums.Status;
 import com.sv.ts.enums.TipoDocumento;
 import com.sv.ts.enums.TipoGenero;
@@ -55,6 +55,7 @@ public class PersonalServiceImpl implements PersonalService {
         EmpleadoModel empleado = new EmpleadoModel();
         empleado.setIdPersona(p.getIdPersona());
         empleado.setIdCargo(personal.getIdCargo());
+        empleado.setIdArea(personal.getIdArea());
         empleado.setIdHorario(personal.getIdHorario());
         empleado.setCodigoEmpleado(personal.getCodigoEmpleado());
         empleado.setTelefono(personal.getTelefono());
@@ -91,6 +92,7 @@ public class PersonalServiceImpl implements PersonalService {
         EmpleadoModel empleado = Optional.ofNullable(empleadoRepository.findById(personal.getIdEmpleado()).orElseThrow(() -> new BusinessException(ErrorConstant.ERROR_FIND))).get();
         PersonaModel persona = Optional.ofNullable(personaRepository.findById(empleado.getIdPersona()).orElseThrow(() -> new BusinessException(ErrorConstant.ERROR_FIND))).get();
         empleado.setIdCargo(personal.getIdCargo());
+        empleado.setIdArea(personal.getIdArea());
         empleado.setIdHorario(personal.getIdHorario());
         empleado.setCodigoEmpleado(personal.getCodigoEmpleado());
         empleado.setTelefono(personal.getTelefono());
@@ -125,6 +127,7 @@ public class PersonalServiceImpl implements PersonalService {
                 .correo(e.getCorreo())
                 .direccion(e.getDireccion())
                 .foto(e.getFoto())
+                .idArea(e.getIdArea())
                 .build();
 
         return personalDto;
@@ -159,6 +162,7 @@ public class PersonalServiceImpl implements PersonalService {
                 .correo(e.getCorreo())
                 .direccion(e.getDireccion())
                 .foto(e.getFoto())
+                .idArea(e.getIdArea())
                 .build();
         return personalDto;
     }
