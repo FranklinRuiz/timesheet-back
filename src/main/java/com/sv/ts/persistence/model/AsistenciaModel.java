@@ -21,5 +21,5 @@ public class AsistenciaModel extends Audit<String> {
     private String coordLong;
     private String coordLat;
     private boolean flgDiaFestivo;
-    private boolean flgactivo;
+    private boolean flgActivo;
 }
