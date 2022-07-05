@@ -1,6 +1,6 @@
 package com.sv.ts.service;
 
-import com.sv.ts.dto.HorarioDto;
+import com.sv.ts.persistence.dto.HorarioDto;
 import com.sv.ts.persistence.model.HorarioModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

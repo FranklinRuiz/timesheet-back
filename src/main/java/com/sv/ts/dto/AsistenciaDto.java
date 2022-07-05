@@ -12,7 +12,7 @@ public class AsistenciaDto {
     private Long idAsistencia;
     private Long idEmpleado;
     private String empleado;
-    private Integer idTipoTrabajo;
+    private Long idTipoTrabajo;
     private String tipoTrabajo;
     private String horaEntrada;
     private String horaSalida;

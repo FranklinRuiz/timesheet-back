@@ -13,6 +13,7 @@ public class EmpleadoModel extends Audit<String> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEmpleado;
     private Long idPersona;
+    private Long idArea;
     private Long idCargo;
     private Long idHorario;
     private String codigoEmpleado;

@@ -1,26 +1,15 @@
 package com.sv.ts.serviceImpl;
 
 import com.sv.ts.dto.AsistenciaDto;
-import com.sv.ts.dto.CargoDto;
-import com.sv.ts.dto.PersonalDto;
 import com.sv.ts.enums.Status;
 import com.sv.ts.persistence.model.AsistenciaModel;
-import com.sv.ts.persistence.model.CargoModel;
-import com.sv.ts.persistence.model.EmpleadoModel;
 import com.sv.ts.persistence.repository.AsistenciaRepository;
-import com.sv.ts.persistence.repository.CargoRepository;
 import com.sv.ts.service.AsistenciaService;
-import com.sv.ts.service.CargoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.time.LocalDate;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

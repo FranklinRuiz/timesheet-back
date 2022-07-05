@@ -1,4 +1,4 @@
-package com.sv.ts.dto;
+package com.sv.ts.persistence.dto;
 
 import lombok.Data;
 

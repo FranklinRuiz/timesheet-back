@@ -1,6 +1,6 @@
 package com.sv.ts.controller;
 
-import com.sv.ts.dto.TipoTrabajoDto;
+import com.sv.ts.persistence.dto.TipoTrabajoDto;
 import com.sv.ts.persistence.model.TipoTrabajoModel;
 import com.sv.ts.service.TipoTrabajoService;
 import io.swagger.annotations.ApiOperation;

@@ -1,7 +1,7 @@
 package com.sv.ts.serviceImpl;
 
 import com.sv.ts.config.advice.BusinessException;
-import com.sv.ts.dto.SedeDto;
+import com.sv.ts.persistence.dto.SedeDto;
 import com.sv.ts.enums.Status;
 import com.sv.ts.persistence.model.SedeModel;
 import com.sv.ts.persistence.repository.SedeRepository;

@@ -1,7 +1,7 @@
 package com.sv.ts.serviceImpl;
 
 import com.sv.ts.config.advice.BusinessException;
-import com.sv.ts.dto.TipoTrabajoDto;
+import com.sv.ts.persistence.dto.TipoTrabajoDto;
 import com.sv.ts.enums.Status;
 import com.sv.ts.persistence.model.TipoTrabajoModel;
 import com.sv.ts.persistence.repository.TipoTrabajoRepository;
