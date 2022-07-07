@@ -1,8 +1,6 @@
 package com.sv.ts.serviceImpl;
 
-import com.sv.ts.persistence.dto.ReporteGeneralDto;
-import com.sv.ts.persistence.dto.ReporteHorasTrabajolDto;
-import com.sv.ts.persistence.dto.ReporteTurnoDto;
+import com.sv.ts.persistence.dto.*;
 import com.sv.ts.persistence.repository.ReportesRepository;
 import com.sv.ts.service.ReportesService;
 import lombok.RequiredArgsConstructor;
@@ -75,4 +73,34 @@ public class ReportesServiceImpl implements ReportesService {
         });
         return rpteHt;
     }
+
+    @Override
+    public List<ReporteAsistenciaDto> RepAsistencias(){
+        List<ReporteAsistenciaDto> rpteAsis = new ArrayList<>();
+        reportesRepository.SPRepAsistencia().forEach(item -> {
+            ReporteAsistenciaDto rp = ReporteAsistenciaDto.builder()
+                    .empleado(item[0].toString())
+                    .hentrada(item[1].toString())
+                    .hsalida(item[2].toString())
+                    .build();
+            rpteAsis.add(rp);
+        });
+        return rpteAsis;
+    }
+
+
+    @Override
+    public List<ReporteInasistenciaDto> RepInasistencias(){
+        List<ReporteInasistenciaDto> rpteIna = new ArrayList<>();
+        reportesRepository.SPRepInasistencia().forEach(item -> {
+            ReporteInasistenciaDto rp = ReporteInasistenciaDto.builder()
+                    .empleado(item[0].toString())
+                    .finasistencia(item[1].toString())
+                    .build();
+            rpteIna.add(rp);
+        });
+        return rpteIna;
+    }
+
+
 }

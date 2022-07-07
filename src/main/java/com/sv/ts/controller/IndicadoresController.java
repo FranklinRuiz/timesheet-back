@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -21,19 +22,19 @@ public class IndicadoresController {
 
     @GetMapping("/datos-personas")
     @ApiOperation("Get list - lista total de personas y total por genero")
-    public List<IndicadoresDto> getPersonas() {
-        return indicadorService.IndDatosPersonas();
+    public List<IndicadoresDto> getPersonas(@RequestParam(value="FInicio", required = false) String FInicio, @RequestParam(value="FFin", required = false) String FFin) {
+        return indicadorService.IndDatosPersonas(FInicio, FFin);
     }
 
     @GetMapping("/datos-personas-por-area")
     @ApiOperation("Get list - lista total de personas por area")
-    public List<IndicadoresPersonaPorAreaDto> getPersonasxArea() {
-        return indicadorService.IndDatosPersonasPorAreas();
+    public List<IndicadoresPersonaPorAreaDto> getPersonasxArea(@RequestParam(value="FInicio", required = false) String FInicio, @RequestParam(value="FFin", required = false) String FFin) {
+        return indicadorService.IndDatosPersonasPorAreas(FInicio, FFin);
     }
 
     @GetMapping("/datos-horas-por-sede")
     @ApiOperation("Get list - lista horas por sede")
-    public List<IndicadoresHorasPorSedeDto> getHorasxSede() {
-        return indicadorService.IndDatosHorasPorSedes();
+    public List<IndicadoresHorasPorSedeDto> getHorasxSede(@RequestParam(value="FInicio", required = false) String FInicio, @RequestParam(value="FFin", required = false) String FFin) {
+        return indicadorService.IndDatosHorasPorSedes(FInicio, FFin);
     }
 }

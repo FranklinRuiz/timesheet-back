@@ -7,7 +7,8 @@ import com.sv.ts.persistence.dto.IndicadoresPersonaPorAreaDto;
 import java.util.List;
 
 public interface IndicadorService {
-    List<IndicadoresDto>  IndDatosPersonas();
-    List<IndicadoresPersonaPorAreaDto>  IndDatosPersonasPorAreas();
-    List<IndicadoresHorasPorSedeDto>  IndDatosHorasPorSedes();
+    List<IndicadoresDto>  IndDatosPersonas( String FInicio, String FFin);
+    List<IndicadoresPersonaPorAreaDto>  IndDatosPersonasPorAreas( String FInicio, String FFin);
+    List<IndicadoresHorasPorSedeDto>  IndDatosHorasPorSedes( String FInicio, String FFin);
+
 }

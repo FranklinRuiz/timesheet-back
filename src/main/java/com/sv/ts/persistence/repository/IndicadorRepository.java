@@ -9,22 +9,22 @@ import java.util.List;
 
 public interface IndicadorRepository extends JpaRepository<IndicadorModel, Long> {
     @Query(
-            value = "call IndDataPersonas()"
+            value = "call IndDataPersonas(:FInicio, :FFin)"
             , nativeQuery = true
     )
-    List<Object[]> SPIndDatosPersonas();
+    List<Object[]> SPIndDatosPersonas(String FInicio, String FFin);
 
     @Query(
-            value = "call IndPersonaPorArea()"
+            value = "call IndPersonaPorArea(:FInicio, :FFin)"
             , nativeQuery = true
     )
-    List<Object[]> SPIndDatosPersonasPorArea();
+    List<Object[]> SPIndDatosPersonasPorArea(String FInicio, String FFin);
 
     @Query(
-            value = "call IndHorasPorSede()"
+            value = "call IndHorasPorSede(:FInicio, :FFin)"
             , nativeQuery = true
     )
-    List<Object[]> SPIndDatosHorasPorSede();
+    List<Object[]> SPIndDatosHorasPorSede(String FInicio, String FFin);
 
 }
 

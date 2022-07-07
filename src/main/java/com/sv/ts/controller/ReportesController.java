@@ -1,8 +1,6 @@
 package com.sv.ts.controller;
 
-import com.sv.ts.persistence.dto.ReporteGeneralDto;
-import com.sv.ts.persistence.dto.ReporteHorasTrabajolDto;
-import com.sv.ts.persistence.dto.ReporteTurnoDto;
+import com.sv.ts.persistence.dto.*;
 import com.sv.ts.service.ReportesService;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 
 public class ReportesController {
-    private final ReportesService reportesService;
+    private ReportesService reportesService;
 
     @GetMapping("/rep-general")
     @ApiOperation("Get list - listar reporte general")
@@ -36,6 +34,18 @@ public class ReportesController {
     @ApiOperation("Get list - listar reporte horas de trabajo")
     public List<ReporteHorasTrabajolDto> getRHT(@RequestParam Long IdSede, @RequestParam String TipoHora) {
         return  reportesService.RepHorasTrabajo(IdSede,TipoHora);
+    }
+
+    @GetMapping("/rep-asistencias")
+    @ApiOperation("Get list - listar reporte asistencias")
+    public List<ReporteAsistenciaDto> getAsistencias() {
+        return  reportesService.RepAsistencias();
+    }
+
+    @GetMapping("/rep-inasistencias")
+    @ApiOperation("Get list - listar reporte inasistencias")
+    public List<ReporteInasistenciaDto> getInasistencias() {
+        return  reportesService.RepInasistencias();
     }
 
 }

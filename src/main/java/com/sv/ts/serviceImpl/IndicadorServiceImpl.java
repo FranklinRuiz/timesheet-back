@@ -19,9 +19,9 @@ public class IndicadorServiceImpl implements IndicadorService {
 
 
   @Override
-    public List<IndicadoresDto> IndDatosPersonas() {
+    public List<IndicadoresDto> IndDatosPersonas( String FInicio, String FFin) {
     List<IndicadoresDto>  indDto = new ArrayList<>();
-    indicadorRepository.SPIndDatosPersonas().forEach(item -> {
+    indicadorRepository.SPIndDatosPersonas(FInicio,FFin).forEach(item -> {
       IndicadoresDto i = IndicadoresDto.builder()
               .total(Long.parseLong(item[0].toString()))
               .hombres(Long.parseLong(item[1].toString()))
@@ -34,9 +34,9 @@ public class IndicadorServiceImpl implements IndicadorService {
 
 
   @Override
-  public List<IndicadoresPersonaPorAreaDto> IndDatosPersonasPorAreas() {
+  public List<IndicadoresPersonaPorAreaDto> IndDatosPersonasPorAreas( String FInicio, String FFin) {
     List<IndicadoresPersonaPorAreaDto>  indDto = new ArrayList<>();
-    indicadorRepository.SPIndDatosPersonasPorArea().forEach(item -> {
+    indicadorRepository.SPIndDatosPersonasPorArea(FInicio,FFin).forEach(item -> {
       IndicadoresPersonaPorAreaDto pxa = IndicadoresPersonaPorAreaDto.builder()
               .area(item[0].toString())
               .cantidad(Long.parseLong(item[1].toString()))
@@ -48,9 +48,9 @@ public class IndicadorServiceImpl implements IndicadorService {
 
 
   @Override
-  public List<IndicadoresHorasPorSedeDto> IndDatosHorasPorSedes() {
+  public List<IndicadoresHorasPorSedeDto> IndDatosHorasPorSedes( String FInicio, String FFin) {
     List<IndicadoresHorasPorSedeDto>  indDto = new ArrayList<>();
-    indicadorRepository.SPIndDatosHorasPorSede().forEach(item -> {
+    indicadorRepository.SPIndDatosHorasPorSede(FInicio,FFin).forEach(item -> {
       IndicadoresHorasPorSedeDto hxs = IndicadoresHorasPorSedeDto.builder()
               .sede(item[0].toString())
               .htrabajadas(item[1].toString())

@@ -25,4 +25,18 @@ public interface ReportesRepository extends JpaRepository<ReporteGeneralModel, L
     )
     List<Object[]> SPRepHorasDeTrabajo(Long IdSede, String TipoHora);
 
+
+    @Query(
+            value = "call RepAsistencias()"
+            , nativeQuery = true
+    )
+    List<Object[]> SPRepAsistencia();
+
+    @Query(
+            value = "call RepInasistencias()"
+            , nativeQuery = true
+    )
+    List<Object[]> SPRepInasistencia();
+
+
 }
