@@ -3,6 +3,7 @@ package com.sv.ts.serviceImpl;
 import com.sv.ts.config.advice.BusinessException;
 import com.sv.ts.persistence.dto.HorarioDto;
 import com.sv.ts.enums.Status;
+import com.sv.ts.persistence.model.CargoModel;
 import com.sv.ts.persistence.model.HorarioModel;
 import com.sv.ts.persistence.repository.HorarioRepository;
 import com.sv.ts.service.HorarioService;
@@ -27,6 +28,10 @@ public class HorarioServiceImpl implements HorarioService {
     @Override
     @Transactional
     public HorarioModel saveHorario(HorarioModel horario) {
+        Optional<HorarioModel> pm = Optional.ofNullable(horarioRepository.findByNombreAndFlgActivo(horario.getNombre(), true));
+        if (pm.isPresent()) {
+            throw new BusinessException(ErrorConstant.ERROR_HORARIO_EXISTES);
+        }
         horario.setFlgActivo(Status.ACTIVE.isValue());
         return horarioRepository.save(horario);
     }

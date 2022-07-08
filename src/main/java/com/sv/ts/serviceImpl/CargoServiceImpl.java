@@ -1,10 +1,13 @@
 package com.sv.ts.serviceImpl;
 
+import com.sv.ts.config.advice.BusinessException;
 import com.sv.ts.persistence.dto.CargoDto;
 import com.sv.ts.enums.Status;
 import com.sv.ts.persistence.model.CargoModel;
+import com.sv.ts.persistence.model.PersonaModel;
 import com.sv.ts.persistence.repository.CargoRepository;
 import com.sv.ts.service.CargoService;
+import com.sv.ts.utils.ErrorConstant;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -25,6 +28,10 @@ public class CargoServiceImpl implements CargoService {
     @Override
     @Transactional
     public CargoModel saveCargo(CargoModel cargo) {
+        Optional<CargoModel> pm = Optional.ofNullable(cargoRepository.findByNombreCargoAndFlgActivo(cargo.getNombreCargo(), true));
+        if (pm.isPresent()) {
+            throw new BusinessException(ErrorConstant.ERROR_CARGO_EXISTES);
+        }
         cargo.setFlgActivo(Status.ACTIVE.isValue());
         return cargoRepository.save(cargo);
     }

@@ -11,4 +11,6 @@ public interface HorarioRepository extends JpaRepository<HorarioModel, Long> {
     Page<HorarioModel> findByFlgActivoAndNombreContaining(Pageable pageable, boolean flgActivo, String nombre);
 
     List<HorarioModel> findByFlgActivo(boolean flgActivo);
+
+    HorarioModel findByNombreAndFlgActivo(String nombre, boolean flg);
 }
