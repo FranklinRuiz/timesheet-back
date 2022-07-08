@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 
 public class ReportesController {
-    private ReportesService reportesService;
+    private final ReportesService reportesService;
 
     @GetMapping("/rep-general")
     @ApiOperation("Get list - listar reporte general")
