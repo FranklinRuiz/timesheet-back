@@ -56,6 +56,7 @@ public class IndicadorServiceImpl implements IndicadorService {
               .htrabajadas(item[1].toString())
               .hextra(item[2].toString())
               .htardanza(item[3].toString())
+              .inasistencias(item[4].toString())
               .build();
       indDto.add(hxs);
     });

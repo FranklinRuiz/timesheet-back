@@ -12,6 +12,6 @@ public interface AsistenciaRepository extends JpaRepository<AsistenciaModel, Lon
             "inner join EmpleadoModel e on e.idEmpleado = a.idEmpleado " +
             "inner join TipoTrabajoModel t on t.idTipoTrabajo = a.idTipoTrabajo " +
             "inner join PersonaModel p on p.idPersona = e.idPersona " +
-            "where e.flgActivo = :activo ")
+            "where e.flgActivo = :activo and a.horaEntrada is not null ")
     Page<Object[]> findAllByPage(@Param("activo") Boolean activo, Pageable page);
 }

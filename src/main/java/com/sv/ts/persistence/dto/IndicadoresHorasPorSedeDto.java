@@ -10,6 +10,7 @@ public class IndicadoresHorasPorSedeDto {
     private String htrabajadas;
     private String hextra;
     private String htardanza;
+    private String inasistencias;
 
 }
 
